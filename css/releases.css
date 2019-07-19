@@ -1,0 +1,524 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+body{
+	font-family: "微软雅黑";
+	background-color: #151524;
+}
+a{
+	text-decoration: none;
+}
+.icon-reverse{
+	display: inline-block;
+	transform: rotateY(180deg);
+}
+.top{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 60px;
+	position: fixed;
+	background-color: #fff;
+	top: 0;
+	z-index: 9999;
+	transition: all .3s;
+}
+.top a{
+	height: 100%;
+	line-height: 60px;
+	transition: all .1s;
+}
+.top>div{
+	display: flex;
+}
+.toggle{
+	width: 51px;
+	text-align: center;
+	color: #f42d6a;
+}
+.toggle:hover{
+	color: #e20c4e;
+}
+.top-left a:last-child img{
+	zoom: 0.5;
+}
+.top-left a:last-child{
+	box-sizing: border-box;
+	padding-top: 19px;
+	line-height: 0;
+}
+.top-right{
+	margin-right: 38px;
+	justify-content: space-between;
+	width: 294px;
+}
+.top-right a{
+	font-size: 12px;
+	color: #cfd0d4;
+}
+.top-right a:last-child{
+	color: #fd9b8d;
+}
+.top-right a:hover{
+	color: #1d1e21;
+}
+.top-right a:last-child:hover{
+	color: #f42d6a;
+}
+.transition{
+	transition: all .3s;
+}
+.bar{
+	width: 4px;
+	background-color: #444;
+	border-radius: 4px;
+	position: absolute;
+	top: 4px;
+	z-index: 99999999;
+	transform: translateX(-8px);
+	opacity: 0;
+}
+.side{
+	width: 270px;
+	background-color: #000;
+	position: absolute;
+	top: 0px;
+	color: whitesmoke;
+	box-sizing: border-box;
+	transform: translateX(-270px);
+	z-index: 99999997;
+	display: flex;
+	background-color: #0b0b1b;
+}
+.buttons{
+	display: flex;
+}
+.buttons a{
+	display: inline-block;
+	width: 90px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: rgba(255,255,255,.3);
+	transition: all .3s;
+}
+.buttons a:nth-child(2){
+	color: rgba(255,255,255,.5);
+}
+.buttons a:hover{
+	background-color: #f42d6a;
+	color: rgba(255,255,255,1);
+}
+.sidelis{
+	position: relative;
+}
+.sideLi1,.sideLi2{
+	padding: 0 20px 0;
+}
+.sideLi1{
+	height: 290px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 20px 0;
+}
+.sideLi1 li{
+	display: flex;
+	justify-content: space-between;
+	border-top: solid #222 1px;
+	align-items: center;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0 10px;
+}
+.sideLi1 li span:first-child{
+	color: #e4e4e4;
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+.sideLi1 li span:last-child{
+	font-family: "宋体";
+	color: #cb2558;
+	font-size: 5px;
+	transition: all 0.5s;
+	transform: translateX(-10px);
+	opacity: 0;
+}
+.sideLi1 li:last-child{
+	border-bottom: solid #222 2px;
+}
+.sideLi1 li:hover span:last-child{
+	transform: translateX(0px);
+	transition: all 0.3s;
+}
+.sideLi1 #releases span:last-child{
+	transform: translateX(0px);
+	transition: all 0.3s;
+	opacity: 1;
+}
+.sideLi1 li:hover{
+	cursor: pointer;
+}
+.side .sideLi1 li .opa1{
+	opacity: 1;
+}
+.sideLi2{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	border-bottom: solid #222 2px;
+	padding: 19px 0;
+	margin: 0 20px;
+}
+.sideLi2 li{
+	height: 32px;
+	line-height: 32px;
+	font-family: "微软雅黑";
+	color: #f42d6a;
+	font-size: 12px;
+	transition: all 0.3s;
+	padding-left: 8px;
+}
+.sideLi2 li:hover{
+	cursor: pointer;
+	color: #fff;
+}
+.no-border{
+	border-bottom: 0;
+}
+.years-bgc{
+	width: 100%;
+	background-color: #030305;
+	position: relative;
+	/*加上定位之后yearsLi的字体在鼠标经过时会有变化？？？？*/
+	z-index: 999;
+	transition: all .3s;
+}
+.years{
+	margin: 60px auto 0;
+	display: flex;
+	width: 1182px;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding-right: 10px;
+	position: relative;
+}
+.years-main{
+	display: flex;
+}
+.years-main li{
+	height: 80px;
+	line-height: 80px;
+	font-size: 12px;
+	position: relative;
+	color: #f42d6a;
+	font-family: "微软雅黑";
+	text-align: center;
+	padding: 0 17px 0;
+	font-weight: bold;
+}
+.years-main li:hover{
+	cursor: pointer;
+}
+.years-main li:first-child{
+	margin-left: 6px;
+	margin-right: 31px;
+	letter-spacing: 1px;
+	padding: 0 14px 0;
+	color: #fff;
+}
+.years-circle{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background-color: #f5f5f5;
+	position: absolute;
+	bottom: -5px;
+	left: 27px;
+	opacity: 0;
+	z-index: 1;
+}
+.years-main li:first-child .years-circle{
+	left: 42px;
+	opacity: 1;
+}
+.shortcuts{
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	padding-left: 10px;
+	margin-right: 15px;
+}
+.shortcuts:hover{
+	cursor: pointer;
+}
+.shortcuts a{
+	display: block;
+	height: 26px;
+	width: 26px;
+	border: 2px solid rgba(255,255,255,.2);
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	border-radius: 4px;
+}
+.shortcuts,.shortcuts a{
+	color: rgba(255,255,255,.3);
+	transition: all .2s;
+}
+.shortcuts-words{
+	position: absolute;
+	background-color: #030305;
+	box-sizing: border-box;
+	padding: 11px 28px 0 16px;
+	width: 302px;
+	bottom: -208px;
+	right: 0;
+	transition: all .2s;
+	display: none;
+	z-index: 999;
+}
+.shortcuts-words p{
+	color: rgba(255,255,255,.6);
+	font-size: 13px;
+	line-height: 20px;
+}
+.shortcuts-words p:last-child{
+	margin-top: 12px;
+	margin-bottom: 23px;
+}
+.years-bottom-line-white{
+	background-color: #f5f5f5;
+	width: 0px;
+	transition: all .2s;
+	height: 2px;
+}
+.years-bottom{
+	background-color: #151524;
+	height: 3px;
+}
+.albums-bgc{
+	background-color: #151524;
+	padding: 27px;
+	padding-top: 27px;
+	padding-bottom: 79px;
+	overflow: hidden;
+	/*margin-top: -3px;*/
+	/*浏览器窗口变宽/变高时会出现bug 不知为何  遂加margin-top -3px 以及yearsHeight +3px
+	 albumsPaddingTop +3px
+	 解决方法：将body背景颜色与albums一致*/
+	transition: all .3s;
+}
+.albums{
+	transform-origin: 0 0;
+	transition: all .3s;
+	position: relative;
+}
+.albums ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.albums ul li{
+	border: 10px solid #000;
+	width: 300px;
+	height: 300px;
+	margin: 19px;
+	position: relative;
+	box-sizing: border-box;
+	transition: all .3s;
+}
+.albums ul li:hover{
+	cursor: pointer;
+}
+.albums ul li>img{
+	width: 100%;
+	height: 100%;
+}
+.mask{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	box-sizing: border-box;
+	padding: 6px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	visibility: hidden;
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(0,0,0,0)),color-stop(1,rgba(0,0,0,0.5)));
+}
+.mask>a{
+	display: block;
+	position: absolute;
+	top: -50px;
+	left: 80px;
+}
+.mask>a img{
+	width: 100%;
+	height: 100%;
+}
+.mask-bottom{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 13px;
+	padding-bottom: 8px;
+	box-sizing: border-box;
+}
+.albums-share>a,.albums-buy{
+	font-size: 12px;
+	color: #fff;
+}
+.albums-share i{
+	font-size: 12px;
+}
+.albums-buy i{
+	font-size: 16px;
+}
+.albums-information{
+	position: absolute;
+	bottom: 0px;
+	width: 280px;
+	z-index: 999;
+	visibility: hidden;
+}
+.albums-name{
+	font-weight: bold;
+	color: #fff;
+	font-size: 22px;
+	text-align: center;
+	margin: 7px 0 8px;
+}
+.albums-artists{
+	font-size: 16px;
+	color: #f42d6a;
+	text-align: center;
+}
+.player{
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	bottom: 0px;
+	z-index: 99999;
+	background-color: #0b0b1b;
+	transition: all .3s;
+}
+.player-top{
+	display: flex;
+	height: 40px;
+	justify-content: space-between;
+	position: relative;
+}
+.player-left{
+	display: flex;
+}
+.player-left>a{
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 13px;
+	line-height: 40px;
+	height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgba(255,255,255,.5);
+	transition: all .3s;
+	letter-spacing: 1px;
+}
+.player-left>a:hover{
+	color: #fff;
+}
+.player-left>span{
+	line-height: 40px;
+	display: inline-block;
+	color: rgba(255,255,255,.3);
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.player-left>span:hover{
+	cursor: default;
+}
+.player-btns a{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	color: rgba(255,255,255,.3);
+	transition: all .3s;
+}
+.player-btns a:nth-child(2){
+	color: rgba(255,255,255,.5);
+}
+.player-btns a:hover{
+	background-color: #f42d6a;
+	color: rgba(255,255,255,1);
+}
+.player-right a{
+	display: inline-block;
+	margin-right: 15px;
+	margin-left: 3px;
+	height: 100%;
+	line-height: 40px;
+	color: rgba(255,255,255,.5);
+	font-weight: bold;
+	font-size: 14px;
+	transition: all .3s;
+	letter-spacing: 1px;
+}
+.player-right>a:hover{
+	color: #fff;
+}
+.player-right>span{
+	line-height: 40px;
+	display: inline-block;
+	color: rgba(255,255,255,.3);
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.player-right>span:hover{
+	cursor: default;
+}
+.playlist{
+	overflow: hidden;
+	height: 200px;
+}
+.songs{
+	transition: all .3s;
+	transform: translateY(0px);
+}
+.songs li{
+	padding-left: 20px;
+	height: 40px;
+	transition: all .3s;
+}
+.songs li:hover{
+	background-color: #0f0f26;
+}
+.songs li:hover a{
+	color: #fff;
+}
+.songs li a{
+	display: block;
+	line-height: 40px;
+	color: #f42d6a;
+	transition: all .3s;
+	font-weight: bold;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+.player-bar{
+	position: absolute;
+	right: 10px;
+	top: 45px;
+	height: 35px;
+	background-color: rgba(255,255,255,.5);
+	border-radius: 4px;
+	width: 4px;
+	z-index: 1;
+}
